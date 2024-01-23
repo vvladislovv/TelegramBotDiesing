@@ -12,14 +12,13 @@ kb_linkBtns.add(ButonStart1)
 kb_btns.add(ButonStart11)
 kb_btns.row(ButonStart3, ButonStart2)
 
-Btny = InlineKeyboardMarkup()
+Btny = ReplyKeyboardMarkup(resize_keyboard=True)
 
-butt1 = InlineKeyboardButton('Компанией',callback_data='Компанией')
-butt2= InlineKeyboardButton('Частным лицом',callback_data='Частным')
+
+butt1 = KeyboardButton('Компанией')
+butt2= KeyboardButton('Частным лицом')
 
 Btny.add(butt1,butt2)
-
-
 
 
 buyMain = InlineKeyboardMarkup()
