@@ -35,7 +35,7 @@ async def NewUserOpenKB(message: types.Message) -> None:
         'У тебя внизу появились кнопки, нажми на одну из них, чтобы продолжить общение со мной!'
     ]
     await message.answer(text='\n'.join(TextTable),reply_markup=kb_btns)
-
+'''
 @dp.message_handler(content_types=['text'])
 async def ContextCheck(msg: types.Message):
     if msg.text == 'Ознакомиться с портфолио':
@@ -67,16 +67,18 @@ async def ContextCheck(msg: types.Message):
         await msg.answer(f'Сейчас мне надо задать тебе пару вопросов')
         time.sleep(0.5)
         await msg.answer('Вы являетесь компанией или частным лицом?',reply_markup=Btny)
+'''
 
     #await message.answer('',reply_markup=types.ReplyKeyboardRemove())
 
     #await message.answer('',reply_markup=types.ReplyKeyboardRemove())
-    
+'''
 @dp.callback_query_handler()
 async def vote_callBack(callBack: types.CallbackQuery):
     if callBack.data == 'Услуги':
        await callBack.message.answer(text="Вашей услуги нет в списке? Напишите мне лично, и мы обсудим то, что вам нужно @kondrachuk_me")
    
+'''    
 
 
 @dp.message_handler(text = 'Компанией')
